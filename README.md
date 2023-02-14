@@ -11,11 +11,11 @@
 
 Clone the repository
 
-    git clone https://github.com/pablopuch/OFGC.git
+    git clone https://github.com/pablopuch/passwork.git
 
 Switch to the repo folder
 
-    cd OFGC/backend/
+    cd passwork/
 
 Install all the dependencies using composer
 
