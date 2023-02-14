@@ -7,40 +7,34 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row g-12">
 
+        {{-- <div>
+            <form action="{{route('passwork.index')}}" method="get">
+                        <input type="text" class="form-control" name="texto" value="{{$texto}}">
+                        <input style="margin-top: 10px" type="submit" class="btn btn-primary" value="Buscar">
+            </form>
+        </div>
+         --}}
+
+        <div class="row">
             
-            <div class="col">
+            <div style="margin-top: 10px">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success" >
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
                 <a href="{{ route('passwork.create') }}" class="btn btn-primary" type="button">{{ __(' + Crear PassWork') }}</a>
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success" >
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
-                <a href="{{ route('passwork.create') }}" class="btn btn-primary" type="button">{{ __(' + Crear Grupo') }}</a>
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success" >
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
+                {{-- <a href="{{ route('passwork.create') }}" class="btn btn-primary" type="button">{{ __(' + Crear Grupo') }}</a> --}}
             </div>
 
-            {{-- <form action="{{route('passwork.index')}}" method="get">
-                <div class="row">
-                    <div class="col-sm-4 my-1">
-                        <input type="text" class="form-control" name="texto" value="{{$texto}}">
-                    </div>
-                    <div class="col-sm-4 my-1">
-                        <input type="submit" class="btn btn-primary" value="Buscar">
-                    </div>
-                </div>
-            </form> --}}
 
+            
 
                 
             @foreach ($passworks as $passwork)
   
-                <div class="col-md-3" style="margin-top: 30px">
+                <div class="col-3" style="margin-top: 30px">
                     <a href="{{ route('passwork.show',$passwork->id) }}">
 
                         <div class="card">

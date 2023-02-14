@@ -17,7 +17,7 @@ class PassworkFactory extends Factory
     public function definition()
     {
         return [
-            //'group_id' =>$this->faker->randomElement([1, 2, 3]),
+            // 'group_id' =>$this->faker->randomElement([1, 2, 3]),
             'name' => $this->faker->randomElement(['Hotmail','Gmail', 'Facebook', 'Steam']),
             'email' => $this->faker->safeEmail(),
             'pass' => '$2y$10$92IXUNpkjO0rOQ5byMi',

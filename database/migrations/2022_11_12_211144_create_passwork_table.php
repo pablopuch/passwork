@@ -18,7 +18,7 @@ return new class extends Migration
             $table->engine="InnoDB";
             $table->bigIncrements('id');
             
-            $table->bigInteger('group_id')->unsigned();
+            $table->bigInteger('group_id')->unsigned()->nullable();
 
             $table->string('name');
             $table->string('email');

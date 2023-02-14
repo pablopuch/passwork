@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //Passwork::factory(25)->create();
-        //User::factory(1)->create();
+        Passwork::factory(25)->create();
+        User::factory(1)->create();
     }
 }
